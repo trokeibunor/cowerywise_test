@@ -1,0 +1,12 @@
+// Font Styling,
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    // give my own style guides
+    margin: 0;
+    padding: 0;
+}
+p,label, input, span, table, tr, td {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+}

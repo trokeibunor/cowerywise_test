@@ -1,0 +1,18 @@
+@import "variables";
+@import "fonts";
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: $base-black;
+}
+// custom classes
+.layout {
+    background: linear-gradient(to bottom, $light-gray 30%, #ffffff 30%);
+    width: 100%;
+    min-height: 100vh;
+    .container {
+        margin: 0px auto;
+        width: 60%;
+    }
+}
