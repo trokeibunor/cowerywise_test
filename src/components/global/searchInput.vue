@@ -1,12 +1,21 @@
 <script setup>
+import {ref} from 'vue';
+import { usePhotosStore } from '@/stores/photos';
 import searchIcon from "../icons/searchIcon.vue";
+const photoService = usePhotosStore()
+const searchTerm = ref('')
+
+// functions
+const searchUnsplash = async() =>{
+    await photoService.fetchPhotos(searchTerm.value)
+}
 </script>
 <template>
     <div class="search">
-        <button>
+        <button @click="searchUnsplash">
             <searchIcon width="100%" height="100%"/>
         </button>
-        <input type="text" placeholder="Please Enter Search">
+        <input type="text" placeholder="Press Enter to Search" v-model="searchTerm" @keyup.enter="searchUnsplash">
     </div>
 </template>
 <style lang="scss" scoped>
