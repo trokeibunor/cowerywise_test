@@ -36,9 +36,11 @@ const siteService = useSiteStore();
         border: none;
     }
     img{
+        // used contain and background image
         width: 100%;
         height: 75vh;
-        object-fit: cover;
+        object-fit: contain;
+        background-color: #f0f2f5;
         border-radius: 8px 8px 0px 0px;
     }
     .text-holder {
