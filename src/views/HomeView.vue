@@ -9,7 +9,7 @@ onMounted(async()=> {
   await loadData('African')
 })
 //Custom functions
-const loadData = async(query,page=1,perpage=9) => {
+const loadData = async(query,page=1,perpage=8) => {
   await photosService.fetchPhotos(query,page,perpage )
 }
 // Show loader screen before call
