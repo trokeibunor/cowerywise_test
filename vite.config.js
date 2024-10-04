@@ -6,6 +6,10 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    'process.env.UNSPLASH_API_URL': JSON.stringify(process.env.UNSPLASH_API_URL),
+    'process.env.UNSPLASH_ACCESS_KEY': JSON.stringify(process.env.UNSPLASH_ACCESS_KEY)
+  },
   plugins: [
     vue(),
     vueDevTools(),
